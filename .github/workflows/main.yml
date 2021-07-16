@@ -80,5 +80,5 @@ jobs:
       # Deploy to (or Create) the Elastic Beanstalk environment
       - name: Create test environment & deploy
         run: |
-          (eb use flask-env && eb status flask-env && eb deploy) || eb create flask-env
+          (eb use Flaskrobot-env && eb status Flaskrobot-env && eb deploy) || eb create Flaskrobot.env
     
