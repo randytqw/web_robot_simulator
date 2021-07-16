@@ -64,6 +64,7 @@ jobs:
           pip install awsebcli --upgrade
           eb --version
           pip install flask --upgrade
+          pip freeze > requirements.txt
         
       # Configure AWS Credentials
       - name: Configure AWS Credentials
