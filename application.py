@@ -3,7 +3,7 @@ from flask import request
 from web_robot_parser import parse
 from robot import Robot
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 commands = ['PLACE', 'MOVE', 'LEFT', 'RIGHT', 'RESET']
 directions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
@@ -25,5 +25,6 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    application.debug = True
+    application.run()
 # main()
