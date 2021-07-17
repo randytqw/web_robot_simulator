@@ -32,7 +32,7 @@ def parse(line, robot):
 
 def placeCommand(params, robot):
     if int(params[0]) > 4 or int(params[0]) < 0 or int(params[1]) > 4 or int(params[1]) < 0:
-        raise Exception
+        return robot
     return robot.place(params)
 
 
