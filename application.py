@@ -18,10 +18,12 @@ def index():
     global global_robot
     if not command == '':
         global_robot = parse(command, global_robot)
-    return ("""<form action="" method="get">
-                <input type="text" name="command">
-                <input type="submit" value="submit">
-              </form>""" + global_robot.report())
+    return (""" <h3>Commands Available:</h3>
+                <p>PLACE <x>,<y>,<direction>/ MOVE/ LEFT/ RIGHT/ RESET</p>
+                <form action="" method="get">
+                    <input type="text" name="command">
+                    <input type="submit" value="submit">
+                </form>""" + global_robot.report())
 
 
 if __name__ == "__main__":
